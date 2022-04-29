@@ -18,7 +18,7 @@ if ($_POST) {
         $query = "INSERT INTO subjects SET name=:name, ref_name=:ref_name, position=:position, visible=:visible, content=:content, created=:created";
  
         // Prepare query for execution
-        $stmt = $con->prepare($query);
+        $stmt = $conn->prepare($query);
  
         // Posted values
         $name=htmlspecialchars(strip_tags($_POST['name']));
